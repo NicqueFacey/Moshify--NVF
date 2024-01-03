@@ -5,6 +5,8 @@
     --accent-color: #ff3400;
     --headings-color: #1b0760;
     --body-color: #918ca4;
+    --border-color:#ccc;
+    --border-radius:30px;
 }
 *,::after,::before{
     box-sizing: border-box;
@@ -189,7 +191,7 @@ a{
 }
 
 .btn--primary{
-    display: inline-block;
+    /* display: inline-block; */
     background: var(--primary-color);
     color: #fff;  
 }
@@ -231,8 +233,8 @@ a{
 
 /* Inputs */
 .input{
-    border-radius: 30px;
-    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
     color: var(--headings-color);
     font-size: 2rem;
     outline:0;
@@ -241,7 +243,22 @@ a{
 ::placeholder{
     color: #cdcbc7;
 }
+/* Input Group */
+.input-group{
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    display: flex;
+}
 
+.input-group .input{
+    border: 0;
+    flex-grow: 1;
+    padding: 1.5rem 1rem;
+}
+
+.input-group .btn{
+    margin: 4px;
+}
 /* Input on desktop computers */
 @media screen and (min-width:1024px){
     .input{
