@@ -313,6 +313,9 @@ a{
     background: var(--primary-color);
     color: #fff;
 }
+.card--primary .badge--primary {
+    background-color: #123de4;
+}
 
 .card--secondary .card__header{
     background: var(--secondary-color);
@@ -323,7 +326,12 @@ a{
     background: #02cdf1;;
 }
 
+
+
 /* Plans */
+.plan{
+    transition: transform .2s ease-out;
+}
 
 .plan__name{
     color: #fff;
@@ -352,6 +360,9 @@ a{
 .plan .list__item{
     margin-bottom: 2rem
 }
+.plan--popular{
+    transform: scale(1.1);   
+}
 .plan--popular .card__header{
     position: relative;
 }
@@ -361,8 +372,15 @@ a{
     display: inline-block;
     position: absolute;
     right: 5%;
-    top: -6px;
-    
+    top: -6px; 
+}
+
+.plan:hover{
+    transform: scale(1.05);
+}
+
+.plan--popular:hover{
+    transform: scale(1.15);  
 }
 
 @media screen and (min-width:1024px){
@@ -452,9 +470,9 @@ a{
     display: grid;
 }
 
-@media screen and (min-width:768px){
+/* @media screen and (min-width: 768px){
     .grid--1x2{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .testimonial .quote, .quote__author{
         font-size: 2rem;
@@ -464,12 +482,18 @@ a{
     }
 
     
-}
-@media screen and (min-width:1024px){
-    .grid--1x3{
-        grid-template-columns: repeat(3,1fr);
+} */
+@media screen and (min-width: 768px) {
+    .grid--1x2 {
+      grid-template-columns: repeat(2, 1fr);
     }
-}
+  }
+
+@media screen and (min-width: 1024px) {
+    .grid--1x3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
 /* Testimonials */
 .testimonial{
@@ -746,4 +770,14 @@ a{
     }
     
     
+}
+
+/* Plan Block */
+.block-plans .grid{
+    gap: 8rem 4rem;
+}
+
+.block-plans .card{
+    max-width: 500px;
+    margin: 0 auto;
 }
