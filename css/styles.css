@@ -190,11 +190,19 @@ a{
     cursor: pointer;   
     font-size: 1.8rem;
     margin: 1rem 0;
+    outline: 0;
     font-weight: 600;
     padding: 2rem 3rem;
     text-transform: uppercase;
     white-space: nowrap; 
 }
+
+.btn .icon{
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+}
+
 .btn--outline{
     display: block;
     background: #fff;
@@ -269,12 +277,14 @@ a{
     border: 2px solid var(--border-color);
     border-radius: var(--border-radius);
     display: flex;
+    
 }
 
 .input-group .input{
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn{
@@ -694,10 +704,46 @@ a{
     .hero{
         padding-top: 0;
     }
-    
+
     .hero__content{
         text-align: left;
         align-self: center;
     }
    
+}
+
+/* domain block */
+
+.block-domain .input-group{
+    box-shadow:  0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem auto;
+    max-width: 670px;
+}
+
+.domain-block__prices{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 700px;
+    margin: 0 auto;
+    
+}
+.domain-block__prices .domain-block__item{
+    align-self: center;
+}
+@media screen and (min-width:768px){
+    .domain-block__prices{
+        /* the code below auto fits the domain-bock__items it provides each grid item
+        using the minmax function where the min size is 100px and the fraction is calculated
+        to make the items fit */
+        grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+        
+        font-size: 1.5rem;
+        
+    }
+    
+    
 }
