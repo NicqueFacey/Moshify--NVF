@@ -579,7 +579,7 @@ a{
 }
 
 .chevron{
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="red" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>') center center no-repeat;    
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" fill="grey" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>') center center no-repeat;    
     
 }
 .collapsible__chevron{
@@ -846,5 +846,99 @@ a{
         width: auto;
         max-width: 700px;
     }
+    
+}
+
+.footer{
+    background: #232323;
+}
+
+.footer__heading{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+.footer .list{
+    margin-top: 0;
+}
+
+.footer .list__item a {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+.footer__section{
+    padding: 2rem;
+    border-bottom: 2px solid #393939;
+}
+
+.footer__brand{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer__copyright{
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: .3;
+}
+
+.footer__section .icon-container{
+    width: 35px;
+    height: 35px;
+}
+
+@media screen and (min-width: 768px){
+    .footer__sections{
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        
+    }
+
+    .footer__section{
+        border-bottom: none;
+    }
+
+    .footer .collapsible__chevron{
+        display: none;
+    }
+
+    .footer .collapsible__content{
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand{
+        order: -1;
+        margin-top: 0;
+    }
+    .footer__brand img{
+        /* TODO: consider refactoring  applying a width of 100% to all images */
+        width: 100%;
+        max-width: 230px;
+    }
+    .footer__section .list__item{
+        line-height: 1.5;
+    }
+    .footer a{
+        color: #777;
+        font-size: 1.5rem;
+        transition: color .3s;
+    }
+    .footer a:hover{
+        color: #fff;
+        
+    }
+    .footer__section .list{
+        margin-top: 1rem;
+    }
+
+    .footer__copyright{
+        font-size: 1.5rem;
+    }
+    
+    .footer__section .icon-container{
+        display: none;
+    }
+    
     
 }
