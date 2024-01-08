@@ -198,7 +198,7 @@ a{
     margin: 1rem 0;
     outline: 0;
     font-weight: 600;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-transform: uppercase;
     white-space: nowrap; 
 }
@@ -505,6 +505,7 @@ a{
 /* Testimonials */
 .testimonial{
     padding: 4rem;
+    margin-bottom: 2rem;
 }
 
 .testimonial__image > img{
@@ -522,22 +523,22 @@ a{
 /* call out */
 .callout{
     padding: 4rem;
-    border-radius: 5px;
-    
+    border-radius: 5px;    
 }
 .callout--primary{
     background: var(--primary-color);
     
 }
 
-.callout__title, .callout__text{
+.callout__heading, .callout__text{
     color: #fff;
     
 }
 
-.callout__title{
-    margin-bottom: 0;
+.callout__heading{
+    margin-bottom: 1rem;
     margin-top: 0;
+    font-weight: 700;
 }
 
 .callout__text{
@@ -563,6 +564,16 @@ a{
     .callout .btn{
         justify-self:start;
         margin: 0 2rem;
+    }
+    .callout{
+        transform: translate(0,25%);
+        
+    }
+    .callout__heading{
+        font-size: 2.5rem;
+    }
+    .callout__text{
+        font-size: 1.5rem;
     }
 }
 
@@ -753,8 +764,9 @@ a{
 }
 
 .domain-block__prices{
+    color: var(--headings-color);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -777,6 +789,11 @@ a{
     }
     
     
+}
+@media screen and (min-width: 1024x){
+    .block-domain .btn{
+       padding: 2rem 3rem;
+    }
 }
 
 /* Plan Block */
@@ -820,6 +837,7 @@ a{
 }
 
 /* Showcase Block */
+
 .block-showcase .block__heading{
     margin-bottom: 4rem;
 }
@@ -851,6 +869,10 @@ a{
 
 .footer{
     background: #232323;
+}
+
+.block--dark .footer{
+    padding-top: 20rem;
 }
 
 .footer__heading{
@@ -891,6 +913,7 @@ a{
 @media screen and (min-width: 768px){
     .footer__sections{
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        margin-top: 3rem;
         
     }
 
