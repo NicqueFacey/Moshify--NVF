@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
    
     
 </head>
@@ -33,11 +34,13 @@
     <section class="block block--dark block--skewed-left hero">
         <div class="container grid grid--1x2">
             <header class="block__header hero__content ">
-                <h1 class="block__heading">Cloud Housing for Pros</h1>
+                <h1 class="block__heading" data-aos="zoom-in-up" data-aos-duration="400"
+                data-aos-easing="ease-out" >Cloud Housing for Pros</h1>
                 <p class="hero__tagline">Deploy your website in less than 60 seconds.</p>
                 <a href="#" class="btn btn--accent btn--stretched">Get Started</a>
             </header>
-            <picture>
+            <picture data-aos="fade-up" data-aos-duration="400"
+            data-aos-easing="ease-out">
                 <source type="image/webp" 
                 src="images/banner.webp 1x, images/banner@2x.webp 2x"/>
     
@@ -451,6 +454,10 @@
     </footer>
     <!-- FOOTER SECTION ENDS HERE-->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
 
