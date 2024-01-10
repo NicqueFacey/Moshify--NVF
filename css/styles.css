@@ -751,7 +751,11 @@ a{
         text-align: left;
         align-self: center;
     }
-   
+    .block-domain .block__header{
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
 }
 
 /* domain block */
@@ -834,6 +838,8 @@ a{
     .feature:nth-of-type(even) .feature__content{
         order: 2;
     }
+
+    
 }
 
 /* Showcase Block */
